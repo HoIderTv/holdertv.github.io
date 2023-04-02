@@ -1,0 +1,55 @@
+.battery1 {
+	
+	width:100px;
+	height:35px;
+	border:3px solid black;
+	background:;
+	position:relative;
+	left:10px;
+}
+.span1{
+	position:absolute;
+	top:30%;
+	left:15%;
+    height:35px;
+    width:30px;
+    transform: translate(-50%, -30%);
+    background: red;
+}
+.battery2{
+	width:100px;
+	height:35px;
+	border:3px solid black;
+	background:;
+	position:relative;
+	left:10px;
+	margin-top:10px;
+}
+.span2{
+	position:absolute;
+	top:30%;
+	left:15%;
+    height:35px;
+    width:65px;
+    transform: translate(-23%, -30%);
+    background: #FFCC33;
+}
+.battery3{
+	width:100px;
+	height:35px;
+	border:3px solid black;
+	background:;
+	position:relative;
+	left:10px;
+	margin-top:10px;
+	background: #00CC33;
+}
+.pimp1{
+	position:absolute;
+	top:30%;
+	left:50%;
+	width:10px;
+	height:15px;
+	transform: translate(50px, -1px);
+	background:black;
+}
