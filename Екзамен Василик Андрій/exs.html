@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Країни</title>
+</head>
+<body>
+
+<input type="text" id="countryInput">
+<button onclick="addCountry()">Enter</button>
+
+<ul id="countryList"></ul>
+
+<script>
+  function addCountry() {
+    // Отримуємо значення з поля вводу
+    var countryInput = document.getElementById('countryInput');
+    var countryValue = countryInput.value;
+
+    // Перевіряємо, чи поле вводу не порожнє
+    if (countryValue.trim() !== '') {
+      // Створюємо новий елемент li
+      var newLi = document.createElement('li');
+      newLi.textContent = countryValue;
+
+      // Отримуємо список ul та додаємо до нього новий елемент li
+      var countryList = document.getElementById('countryList');
+      countryList.appendChild(newLi);
+
+      // Очищуємо поле вводу
+      countryInput.value = '';
+    }
+  }
+</script>
+
+</body>
+</html>
