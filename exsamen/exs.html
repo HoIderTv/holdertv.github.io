@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Країни</title>
+</head>
+<body>
+
+<input type="text" id="countryInput">
+<button onclick="addCountry()">Enter</button>
+
+<ul id="countryList"></ul>
+
+<script>
+  function addCountry() {
+    var countryInput = document.getElementById('countryInput');
+    var countryValue = countryInput.value;
+    if (countryValue.trim() !== '') {
+      var newLi = document.createElement('li');
+      newLi.textContent = countryValue;
+      var countryList = document.getElementById('countryList');
+      countryList.appendChild(newLi);
+      countryInput.value = '';
+    }
+  }
+</script>
+
+</body>
+</html>
