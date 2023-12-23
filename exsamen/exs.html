@@ -8,23 +8,27 @@
 <body>
 
 <input type="text" id="countryInput">
-<button onclick="addCountry()">Enter</button>
+<button onclick="addCountries()">Enter</button>
 
 <ul id="countryList"></ul>
-
 <script>
-  function addCountry() {
+  function addCountries() {
     var countryInput = document.getElementById('countryInput');
-    var countryValue = countryInput.value;
-    if (countryValue.trim() !== '') {
-      var newLi = document.createElement('li');
-      newLi.textContent = countryValue;
-      var countryList = document.getElementById('countryList');
-      countryList.appendChild(newLi);
-      countryInput.value = '';
+    var countriesString = countryInput.value;
+    var countriesArray = countriesString.split(',');
+    for (var i = 0; i < countriesArray.length; i++) {
+      var countryValue = countriesArray[i].trim();
+      if (countryValue !== '') {
+        var newLi = document.createElement('li');
+        newLi.textContent = countryValue;
+        var countryList = document.getElementById('countryList');
+        countryList.appendChild(newLi);
+      }
     }
+    countryInput.value = '';
   }
 </script>
 
 </body>
 </html>
+
